@@ -55,6 +55,7 @@ async function run() {
 
         // insert One document 
         app.post('/addNewPackage', async (req, res) => {
+           console.log("Kaj koros na kn?")
             const newPackage = req.body;
             const result = await packageCollection.insertOne(newPackage)
             res.send(result);
